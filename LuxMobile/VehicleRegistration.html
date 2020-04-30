@@ -1,0 +1,73 @@
+﻿
+
+
+
+
+
+<html>
+<head>
+<title>vehicle registration</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+
+  <?php
+      include("nav.php");
+  ?>
+
+<table class = "table table-bordered table-hover">
+  <td>
+        <div class="container">
+          <form id = 'form2' name = "form2" method = "post" enctype = "multipart/form-data" action = "registerVehicle.php">
+          <table class = "table table-striped table-hover table-bordered">
+              <div class="form-group">          
+				<tr>
+					<td colspan = "2"><div align = "center"><h2 style='color:rgb(109, 9, 148)'>Vehicle Registration Form</h2></div></td>
+				</tr>          
+			  </div> 	
+			  
+              <div class="form-group">			  	
+				<tr>	
+					<td colspan = "2">
+						<?php
+						error_reporting(0);
+						echo $_GET['msg'];
+						?>
+					</td>
+				</tr>
+			 </div>					
+			 
+              <div class="form-group">              
+                <tr>
+              	   <td> <label><h4>Year</h4></label> </td>
+      	           <td> <input type="varchar" name="year" class="form-control" ></td>
+                </tr>  
+			  
+				<tr>
+					<td> <label><h4>Make</h4></label> </td>
+					<td> <input type="varchar" name="make" class="form-control" ></td>
+			   </tr>  
+
+                <tr>
+	 	            <td> <label><h4>Model</h4></label></td>
+                    <td> <input type="varchar" name="model" class="form-control" ></td>
+				</tr>  
+				
+				<tr>
+					<td> <label><h4>Type</h4></label> </td>
+					<td> <input type="varchar" name="type" class="form-control" ></td>
+			   </tr> 
+        
+
+              
+
+              	<tr>
+	              <td colspan = "2"><button type="submit" class = "btn btn-outline-primary">Submit</button></td>
+	              </tr>  
+           </table>
+          </form>
+		</div>
+  </td>
+</table>
+</body>
+<html>

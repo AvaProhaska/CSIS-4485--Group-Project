@@ -1,0 +1,77 @@
+﻿
+<html>
+	<head>
+	<title>editInfo</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	</head>
+	<body>
+	
+	  <?php
+		  include("nav.php");
+	  ?>
+	
+	<table class = "table table-bordered table-hover">
+	  <td>
+			<div class="container">
+			  <form id = 'form1' name = "form1" method = "post" enctype = "multipart/form-data" action = "register.php">
+			  <table class = "table table-striped table-hover table-bordered">
+				  <div class="form-group">          
+					<tr>
+						<td colspan = "2"><div align = "center"><h2 style='color:rgb(29, 202, 130)'>Edit Account Info</h2></div></td>
+					</tr>          
+				  </div> 	
+				  
+				  <div class="form-group">			  	
+					<tr>	
+						<td colspan = "2">
+							<?php
+							error_reporting(0);
+							echo $_GET['msg'];
+							?>
+						</td>
+					</tr>
+				 </div>					
+				 
+				  <div class="form-group">              
+					<tr>
+						 <td> <label><h4>First name</h4></label> </td>
+						 <td> <input type="varchar" name="firstname" class="form-control" ></td>
+					</tr>  
+				  
+					<tr>
+						<td> <label><h4>Last name</h4></label> </td>
+						<td> <input type="varchar" name="lastname" class="form-control" ></td>
+				   </tr>  
+	
+					<tr>
+						 <td> <label><h4>Email</h4></label></td>
+						<td> <input type="email" name="email" class="form-control" ></td>
+					</tr>  
+					
+					<tr>
+						<td> <label><h4>Username</h4></label> </td>
+						<td> <input type="varchar" name="username" class="form-control" ></td>
+				   </tr> 
+				  
+					<tr>
+						 <td> <label><h4>Password</h4></label></td>
+						<td> <input type="password" name="password" class="form-control" ></td>
+					</tr>               
+	
+					<tr>  
+						<td><label><h4>Phone</h4></label></td>
+						<td><input type="varchar" name="phone" class="form-control" ></td>
+					  </tr>    
+	
+				  
+	
+					  <tr>
+					  <td colspan = "2"><button type="submit" class = "btn btn-outline-primary">Submit</button></td>
+					  </tr>  
+			   </table>
+			  </form>
+			</div>
+	  </td>
+	</table>
+	</body>
+	<html>
